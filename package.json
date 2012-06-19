@@ -7,5 +7,9 @@
     , "jade": ">= 0.0.1"
     , "connect-assetmanager": ">= 0.0.28"
     , "gzippo" : ">=0.1.4"
+    , "twitter" : ">=0.1.18"
+  }
+  , "engines": {
+    "node": "0.6.x"
   }
 }

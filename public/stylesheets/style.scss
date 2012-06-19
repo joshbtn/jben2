@@ -30,8 +30,11 @@ $color-light-grey: #eee;
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');}
 
 @mixin menuAcitveHover() {
-  padding-bottom:35px;
+  padding-bottom:25px;
   background:#fff;
+  @include gradient(#eee, #fff);
+  //border-left:solid 1px #f0f0f0;
+  //border-right:solid 1px #f0f0f0;
   @include box-shadow(0px, -8px, 8px, 0px, rgba(1,1,1,0.2)); }
 
 @mixin iconJben2($margin-top: -1px) {
@@ -101,7 +104,7 @@ body {
   position:relative;
   display:block;
   bottom:-23px;
-  left:-30px;
+  left:-31px;
   border-top:solid 5px darken($color-FAAC24, 40%);
   border-right:solid 5px darken($color-FAAC24, 40%);
   border-bottom: 5px solid transparent;
@@ -110,7 +113,13 @@ body {
   width:0px;}
   
 /*MENU*/
-#menu{margin-top:0.61em;}
+#menu{
+  margin-top:.61em;
+}
+
+#menu .nav{
+  margin:10px 0 5px 0;
+}
 
 #menu li{
   display:inline;

@@ -1,1 +1,159 @@
-body{ font-family: 'Questrial', sans-serif; }
+// Vars
+$color-Dragon_Scales: #3B5D2B;
+$color-green_Eisacktal: #6A9254;
+$color-FAAC24 : #FAAC24;
+$color-Irish_Citizens_Yello: #F8E035;
+$color-Blue_Eisacktal: #69A3D5;
+$color-white: #fefefe;
+$color-light-grey: #eee;
+
+// Mixins
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $spread $color;
+    -moz-box-shadow:inset $top $left $blur $spread $color;
+    box-shadow:inset $top $left $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }}
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;}
+
+@mixin gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from, $to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');}
+
+@mixin menuAcitveHover() {
+  padding-bottom:35px;
+  background:#fff;
+  @include box-shadow(0px, -8px, 8px, 0px, rgba(1,1,1,0.2)); }
+
+// Css Rules
+html {
+  //background:$color-light-grey;
+  //background:$color-Irish_Citizens_Yello;
+  background:$color-Blue_Eisacktal;
+}
+
+body { 
+  font-family: 'Questrial', sans-serif;
+  background:transparent;
+}
+
+.left{text-align: left}
+.center{text-align: center}
+.right{text-align: right}
+
+#header{
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+#header h2{
+font-size:1em;
+font-weight: normal;
+color:#999;}
+
+#header div.span11{
+  margin-top:10px;
+}
+
+#page-container{
+  background:$color-white;
+  margin:0.61em auto;
+  padding: 1.61em;
+  @include rounded(10px);
+  @include box-shadow(1px, 1px, 10px, 1px, rgba(1,1,1,0.2));}
+
+/*BIO*/
+#bio{
+  margin:2em 0 2em -30px;
+  padding: 1em 0.61em 1em 30px;
+  background: $color-FAAC24;
+  //background: $color-Irish_Citizens_Yello;
+  border-right: solid 10px lighten($color-FAAC24, 10%);
+  @include box-shadow(2px, 2px, 4px, 0px, rgba(1,1,1,0.2));}
+
+#bio h2{
+  color:#fff;}
+
+#bio #corner{
+  position:relative;
+  display:block;
+  bottom:-23px;
+  left:-30px;
+  border-top:solid 5px darken($color-FAAC24, 40%);
+  border-right:solid 5px darken($color-FAAC24, 40%);
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  height:0px;
+  width:0px;}
+  
+/*MENU*/
+#menu{margin-top:0.61em;}
+
+#menu li{
+  display:inline;
+  padding-top:28px;
+  margin-right:2px;}
+  
+#menu li a{
+  padding:1em;
+  color:$color-light-grey;
+  padding:1.8%;
+  display:inline;}
+
+#menu li:hover a{
+  color:#333;}
+
+#menu li a{background:transparent;}
+
+#menu li.active-menu-item{
+  @include menuAcitveHover()}
+
+#menu li:hover{
+  @include menuAcitveHover()}
+  
+/*ICONS*/
+.icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+.icon-linkedin{
+  background-image: url("../img/LinkedIn_IN_Icon_15px.png");
+  background-position: 0px 0px;
+  margin-top:-1px; }
+  
+.icon-tumblr{
+  background-image: url("../img/tumblr.png");
+  background-position: 0px 0px;
+  margin-top:-1px;}
+  
+.icon-twitter{
+  background-image: url("../img/twitter.png");
+  background-position: 0px 0px;
+  margin-top:-1px;}
+
+.icon-github{
+  background-image: url("../img/github.png");
+  background-position: 0px 0px;
+  margin-top:-1px;}
+
+.icon-stackoverflow{
+  background-image: url("../img/stackoverflow.png");
+  background-position: 0px 0px;
+  margin-top:-1px;}

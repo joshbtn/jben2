@@ -1,8 +1,56 @@
 !!!
-html
+//if lt IE 7
+    html(class="no-js ie6 oldie", lang="en")
+//if IE 7
+    html(class="no-js ie7 oldie", lang="en")
+//if IE 8
+    html(class="no-js ie8 oldie", lang="en")
+// [if gt IE 8] <!
+html(class="no-js", lang="en")
+    // <![endif]
   head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     title= title
+    meta(property='og:title', content=title) 
+    meta(property='og:url', content=share_url)
+    meta(property='og:description', content=description) 
+    meta(property='og:image', content=image_url)
+    meta(property='og:type', content=og_type)
+    meta(property='description', content=description)
     link(href='http://fonts.googleapis.com/css?family=Questrial', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/stylesheets/reset.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+  body
+    div#menu.container 
+        ul.nav
+          li.active-menu-item
+            a(href='/')
+              i.icon-home
+          li
+            a(href='https://github.com/joshatjben', target='_blank')
+              i.icon-github
+              span &nbsp;github
+          li
+            a(href='https://twitter.com/#!/joshatjben', target='_blank')
+              i.icon-twitter
+              span &nbsp;twitter
+          li
+            a(href='https://joshbennett.me', target='_blank')
+              i.icon-tumblr
+              span &nbsp;tumblr
+          li
+            a(href='http://stackoverflow.com/users/736764/joshatjben', target='_blank')
+              i.icon-stackoverflow
+              span &nbsp;stackoverflow
+          li
+            a(href='http://www.linkedin.com/pub/josh-bennett/12/13b/26a', target='_blank')
+              i.icon-linkedin
+              span &nbsp;Linkedin
+              
+    div#page-container.container!= body
+    div#footer.container
+      div.row.center
+        div.span12
+          &copy; 2012 Josh Bennett

@@ -60,15 +60,19 @@ body {
 }
 
 #header .title{
-  margin-top:7px;
+  margin-top:1em;
+}
+
+#header .title h1{
+  line-height:1em;
 }
 
 #header .title h2{
   margin-top:0;
-  font-size:1em;
+  font-size:1.2em;
   font-weight: normal;
-  line-height:1em;
-  color:#999;}
+  line-height:1.4em;
+  color:#666;}
 
 #header div.span11{
   margin-top:10px;

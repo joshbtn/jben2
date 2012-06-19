@@ -18,9 +18,14 @@ body {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-#header h2 {
+#header .title {
+  margin-top: 7px; }
+
+#header .title h2 {
+  margin-top: 0;
   font-size: 1em;
   font-weight: normal;
+  line-height: 1em;
   color: #999; }
 
 #header div.span11 {

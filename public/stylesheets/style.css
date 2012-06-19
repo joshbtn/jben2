@@ -110,26 +110,26 @@ body {
   background-repeat: no-repeat; }
 
 .icon-linkedin {
-  background-image: url("../img/LinkedIn_IN_Icon_15px.png");
-  background-position: 0px 0px;
+  background-position: -42px 0px;
+  background-image: url("../img/jben2_icons.png");
   margin-top: -1px; }
 
 .icon-tumblr {
-  background-image: url("../img/tumblr.png");
-  background-position: 0px 0px;
+  background-position: -56px 0px;
+  background-image: url("../img/jben2_icons.png");
   margin-top: -1px; }
 
 .icon-twitter {
-  background-image: url("../img/twitter.png");
-  background-position: 0px 0px;
+  background-position: -14px 0px;
+  background-image: url("../img/jben2_icons.png");
   margin-top: -1px; }
 
 .icon-github {
-  background-image: url("../img/github.png");
   background-position: 0px 0px;
+  background-image: url("../img/jben2_icons.png");
   margin-top: -1px; }
 
 .icon-stackoverflow {
-  background-image: url("../img/stackoverflow.png");
-  background-position: 0px 0px;
+  background-position: -28px 0px;
+  background-image: url("../img/jben2_icons.png");
   margin-top: -1px; }

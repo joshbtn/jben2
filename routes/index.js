@@ -13,3 +13,9 @@ exports.index = function(req, res){
 	  , og_type: "website"
   });
 };
+
+
+function getTweets(){
+	//This is the url for user info
+	//https://api.twitter.com/1/statuses/user_timeline.json?include_entities=false&include_rts=true&screen_name=joshatjben&count=5
+}

@@ -12,10 +12,13 @@ div#bio
   p I am an interactive solutions developer in the Philadelphia area.  I specialize in web apps, mobile apps and multimedia installments.
   div#corner &nbsp; 
 
-div.row
+div.row#tweets
   div.span4
     h2 Latest Tweets
-    p Check back soon
+    ul
+        - for(var i =0; i<6; i++) {
+        li= tweets[i].text
+        - }
     p
       a(href='https://twitter.com/#!/joshatjben', target='_blank').btn.btn-primary See more
   div.span4

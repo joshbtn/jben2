@@ -3,13 +3,19 @@ div#header.row
       img(src="http://www.gravatar.com/avatar/dccdd2e02b7979f8b48f96a91376e7eb.png")
     div.span6.title
       h1 Josh Bennett
-      h2 Philadelphia web and interactive solutions developer. 
+      h2 Philadelphia web and interactive solutions architect. 
     div.span5.search
       p.hide= description
 
-div#bio
+div#bio(itemtype="http://data-vocabulary.org/Person")
   h2 About me.
-  p I am an interactive solutions developer in the Philadelphia area.
+  p(itemprop="photo")
+    img(src="http://25.media.tumblr.com/avatar_01ffe8986f55_40.png")
+  p
+    span(itemprop="name") Josh Bennett
+    | (AKA 
+    span(itemprop="nickname") joshatjben). 
+    | I'm a Philadelphia based  interactive solutions architect.  I specialize in web and mobile.</p>
   div#corner &nbsp; 
 
 div.row#tweets
